@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  .logo {
+    text-align: center;
+    width: 90px;
+  }
+
+  #carno {
+    width: 280px;
+  }
+
+  #other {
+    width: 380px;
+  }
+</style>
+
+<body>
+
+  <div class="container">
+
+    <div class="text-center mt-5">
+      <img src="img/0038056.jpeg" alt="" class="logo"> <br>
+      <h5>ใบสั่งเจ้าพนักงานจารจรหรือพนักงานเจ้าหน้าที่</h5>
+      <p>Traffic Ticket issued by Trafic Officers or Compentent Officials</p>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="ticket">เลขที่ใบสั่ง</label>
+        <input type="text" class="form-control" id="ticket" placeholder="Traffic Ticket No.">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <label for="book">เล่มที่</label>
+        <input type="text" class="form-control" id="book" placeholder="Book No.">
+      </div>
+
+      <div class="col-sm-1 ">
+        <label for="no">เลขที่</label>
+        <input type="number" class="form-control" id="no" placeholder="No.">
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-2">
+        <p>ด้วยผู้ขับขี่</p>
+
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถจักรยานยนต์
+        <p class="ml-3">Motorcycle</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถนั่งส่วนบุคคล
+        <p class="ml-3">Private Car</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถประเภทอื่น
+        <p class="ml-3">Other Vehicle</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถขนส่ง
+        <p class="ml-3">Truck</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">อื่นๆ
+        <input type="text" class="form-control" id="carno" placeholder="Ohther">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-6 text-left">
+        <p>ยี่ห้อ</p>
+        <select name="Marque" id="Marque" class="form-control" required="">
+          <option value="BMW">BWM</option>
+          <option value="Benz">Benz</option>
+          <option value="Lumborghini">Lumborghini</option>
+          <option value="Audi">Audi</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Isusu">Isusu</option>
+          <option value="MG">Mg</option>
+          <option value="Ford">Ford</option>
+        </select>
+      </div>
+
+      <div class="col-6 text-left">
+        <p>จังหวัด</p>
+        <select name="province" id="province" class="form-control" required="">
+          <option value="เชียงราย">เชียงราย</option>
+          <option value="เชียงใหม่">เชียงใหม่</option>
+          <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+          <option value="ลำพูน">ลำพูน</option>
+          <option value="ลำพูน">ลำปาง</option>
+          <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+          <option value="พะเยา">พะเยา</option>
+          <option value="น่าน">น่าน</option>
+
+        </select>
+      </div>
+
+    </div>
+
+    <div class="mt-3">
+      <p>หมายเลขทะเบียนรถ</p>
+      <input type="text" class="form-control" id="carno" placeholder="License Plate No.">
+    </div>
+    <!--
+        <div class="row">
+            <div class="col-6 text-left">
+                <p>ยี่ห้อ</p>
+                <p>Marque : ...................................................................................................................................................................
+                </p>
+            </div>
+
+            <div class="col-6 text-left">
+                <input type="checkbox">กรุงเทพหมานคร
+                <p class="ml-3">Bankok</p>
+                <input type="checkbox">จังหวัด
+                <p class="ml-3">Province.......................................................</p>
+            </div> -->
+
+
+    <div class="row mt-3">
+      <div class="col-2">
+        <p>ป้ายทะเบียนสี</p>
+
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ขาว
+        <p class="ml-3">White</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">เหลือง
+        <p class="ml-3">Yello</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">แดง
+        <p class="ml-3">Red</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">อื่นๆ
+        <input type="text" class="form-control" id="carno" placeholder="Ohther">
+      </div>
+    </div>
+
+    <hr>
+
+    <p>กระทำผิดฐาน/Committing the following offenses :</p>
+
+    <div class="row">
+      <div class="col-2">
+        <p>๑. ขับรถ</p>
+
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ฝ่าฝืนจราจรไฟแดง
+        <p class="ml-3">Violation of red light</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ฝ่าฝืนเครื่องหมายบนพื้นทาง
+        <p class="ml-3">Violation Of signals on road sufface</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ฝ่าฝืนเครื่องหมายจราจร
+        <p class="ml-3">Violation of traffic sign prohibiting</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ในลักษณะกีดขวางจราจร
+        <p class="ml-3">In amanner that block thetraffic
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">อื่นๆ
+        <input type="text" class="form-control" id="carno" placeholder="Ohther">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <p>๒. หยุดรถ</p>
+
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ในลักษณะกีดขวางจราจร
+        <p class="ml-3">In amanner that block thetraffic
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ในเขตห้ามหยุด
+        <p class="ml-3">In the non-stop zone</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รอสัญญาณล้ำแนว
+        <p class="ml-3">Beyond the stop line when waiting for the traffic ligth</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">อื่นๆ
+        <input type="text" class="form-control" id="carno" placeholder="Ohther">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <p>๓. จอดรถไว้</p>
+
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ในลักษณะกีดขวางจราจร
+        <p class="ml-3">In amanner that block thetraffic
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">บนทางเท้า
+        <p class="ml-3">On the footpath</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ในเขตห้ามจอด
+        <p class="ml-3">In the forbidden zone</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ไม่ชิดขอบทางด้านซ้าย
+        <p class="ml-3">Not adjacent to the blocks left-hand side lane</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">อื่นๆ
+        <input type="text" class="form-control" id="carno" placeholder="Ohther">
+      </div>
+
+    </div>
+
+    <div class="mt-3">
+      <p>๔. อื่นๆ</p>
+      <input type="text" class="form-control" id="Other" placeholder="Other.">
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4 md3">
+        <label for="kk">เหตุเกิดที่</label>
+        <label for="Alley">ตรอก/ซอย</label>
+        <input type="text" class="form-control" placeholder="Place of incident/Alley">
+      </div>
+      <div class="col-md-4 md3">
+        <label for="Road">ถนน</label>
+        <input type="text" class="form-control" placeholder="Road">
+      </div>
+      <div class="col-md-4 md3">
+        <label for="District">ตำบล/เเขวง</label>
+        <input type="text" class="form-control" placeholder="Sub-District">
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-3 md3">
+        <label for="Districk">อำเภอ/เขต</label>
+        <input type="text" class="form-control" placeholder="Districk">
+      </div>
+
+      <div class="col-md-3 md3">
+        <label for="Province">จังหวัด</label>
+        <input type="text" class="form-control" placeholder="Province">
+      </div>
+
+      <div class="col-md-3 md3">
+        <div class="col2-md-8 mb-3">
+          <label for="Date">เดือน/วัน/ปี</label>
+          <input type="date" id="Date" class="form-control" required="date">
+        </div>
+      </div>
+
+      <div class="col-md-3 mb3">
+        <div class="col2-md-8 mb-3">
+          <label for="At">เวลา</label>
+          <input type="Time" id="At" class="form-control" required="Time">
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <p>
+      อาศัยอำนาจตามความในมาตรา ๑๒๐ วรรคหนึ่ง เเห่ง พ.ร.บ.จราจรทางอากาศ พ.ศ.๒๕๗๗ ซึ้งเเก้ใขเพิ่มเติมโดย พ.ร.บ.จราจรทางน้ำ
+      (ฉบับที่ ๙ ) พ.ศ.๒๕๕๗ เเละมาตรา ๑๔๑ เเห่ง พ.ร.บจราจรทางบก พ.ศ.๒๕๒๒ ซึ่งเเก้ไขเพิ่มเติมโดย พ.ร.บ.จราจรทางบก
+      (ฉบับที่ ๑๑ ) พ.ศ.๒๕๕๙
+      ให้ผู้ขับขี่เหรือเจ้าของรถหรือผู้ครอบครองรถไปชำระค่าปรับต้ามข้อกำหนดของสำนักงานตำรวจเเห่งชาติ
+    </p>
+
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <label for="bath">จำนวนเงิน (bath)</label>
+        <input type="number" class="form-control" placeholder="Bath" required="">
+      </div>
+      <div class="col-md-9 mb-3">
+        <label for="police"> ณ สถานีตำรวจ</label>
+        <input type="text" class="form-control" placeholder="Police station" required="">
+      </div>
+    </div>
+
+    <div class="row nb-2">
+      <div class="col-md-12"><input type="checkbox" name="post"
+          id="post">ส่งทางไปรษณีย์พร้อมพยานหลักฐานและให้เจ้าของรถหรือผู้ครอบครองรถไปชำระค่าปรับตามที่ระบุไว้ข้างต้นภายในสามสิบวันนับแต่วันที่ได้รับใบสั่ง
+      </div>
+    </div>
+
+    <hr>
+
+    <p>ลงชื่อผู้ออกใบสั่ง </p>
+    <!-- <label for="codename">ลงชื่อผู้ออกใบสั่ง</label> -->
+    <div class="row">
+      <div class="col-md-3 md-3">
+        <label for="Rank">ยศ</label>
+        <input type="text" class="form-control" id="Rank" placeholder="Rank" required="">
+      </div>
+
+      <div class="col-md-3 md-3">
+        <label for="First">ชื่อ</label>
+        <input type="text" class="form-control" id="First" placeholder="Frist Name" required="">
+      </div>
+
+      <div class="col-md-3 md-3">
+        <label for="Last">ชื่อสกุล</label>
+        <input type="text" class="form-control" id="Last" placeholder="Last name" required="">
+      </div>
+
+      <div class="col-md-3 md-3">
+        <label for="code">รหัส</label>
+        <input type="number" class="form-control" id="code" placeholder="Code" required="">
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <h5>ใบรับแทนใบอณุญาติขับขี่</h5>
+      <p>Substitute of the Drivr' s License </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 md-3">
+        <label for="Name">ชื่อผู้ขับขี่</label>
+        <input type="text" class="form-control" id="Name" placeholder="Drive's Name: " required="">
+      </div>
+
+      <div class="col-md-6 md-3">
+        <label for="ID ">เลขบัตรประชาชน</label>
+        <input type="number" class="form-control" id="ID " placeholder="ID No:" required="">
+      </div>
+
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6 md-3">
+        <label for="Driver">ใบอนุญาตขับขี่เลขที่/ฉบับที่</label>
+        <input type="text" class="form-control" id="Driver" placeholder="Drive's License No./Book No: " required="">
+      </div>
+      <br>
+      <div class="col-md-3 mb3">
+
+        <label for="Permission day">วันที่อนุญาต</label>
+        <input type="date" id="Permission day" class="form-control" required="Time">
+
+      </div>
+
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4 md-3">
+        <label for="province">จังหวัด</label>
+        <input type="text" class="form-control" id="province" placeholder=" Province" required="">
+      </div>
+
+      <div class="col-md-4 md-3">
+        <label for="rach">สาขา</label>
+        <input type="text" class="form-control" id="branch" placeholder=" Branch" required="">
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-2">
+        <p>ใบขับขี่</p>
+
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถจักรยานยนต์
+        <p class="ml-3">Motorcycle</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถสามล้อ
+        <p class="ml-3">Tricycle</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถยนต์
+        <p class="ml-3">Automobile</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">รถขนส่ง
+        <p class="ml-3">Truck</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">อื่นๆ
+        <input type="text" class="form-control" id="carno" placeholder="Ohther">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <p>ชนิด</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ชั่วคราว
+        <p class="ml-3">Temporary</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ตลอดชีพ
+        <p class="ml-3">Lifetime</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">สาธารณะ
+        <p class="ml-3">Public</p>
+      </div>
+
+      <div class="col-2">
+        <input type="checkbox">ระหว่างประเทศ
+        <p class="ml-3">International</p>
+      </div>
+
+      <div class="col-1">
+        <input type="checkbox">อื่นๆ
+        <input type="text" class="form-control" id="carno" placeholder="Ohther">
+      </div>
+
+    </div>
+
+    <br>
+    <p>ข้าพเจ้าผู้ออกใบสั่งฉบับนี้ได้เรียกเก็บใบอนุญาติขับขี่ไว้ และให้ใช้เป็นใบแทนใบอนุญาติขับขี่ได้ชั่วคราว ไม่เกิน ๗
+      วัน นับแต่วันที่ออกใบรับแทนใบอนุญาติขับขี่นี้
+    </p>
+
+    <br>
+    <div class="row">
+      <div class="col-md-3 md-3">
+        <label for="rank">ยศ</label>
+        <input type="text" class="form-control" id="rank" placeholder=" Rank" required="">
+      </div>
+
+      <div class="col-md-3 md-3">
+        <label for="Fname">ชื่อ</label>
+        <input type="text" class="form-control" id="Fname" placeholder=" First Name" required="">
+      </div>
+
+      <div class="col-md-3 md-3">
+        <label for="Lname">จังหวัด</label>
+        <input type="text" class="form-control" id="Lname" placeholder=" Last Name" required="">
+      </div>
+
+      <div class="col-md-3 md-3">
+        <label for="code">รหัส</label>
+        <input type="number" class="form-control" id="code" placeholder=" Code" required="">
+      </div>
+
+    </div>
+
+    <div>
+      <hr class="mb-9">
+      <button class="btn btn-primary btn-lg btn-block" type="submit "><a href="./index2.html">บันทึกข้อมูล</button></a>
+    </div>
+
+
+
+
+  </div>
+
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
